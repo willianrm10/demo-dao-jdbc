@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLWarning;
 import java.util.Properties;
 
 import com.mysql.jdbc.Statement;
@@ -15,7 +14,7 @@ public class DB {
 	
 	private static Connection conn =  null;
 	
-	public static Connection getConection() {
+	public static Connection getConnection() {
 		if(conn == null) {
 			try {
 				Properties props = loadProperties();
